@@ -437,18 +437,6 @@ cargo run --bin oasis -- simulate --file tests/hello.wasm
 | License bypass | Hardware fingerprinting + cryptographic verification |
 | Supply chain attacks | Single binary, zero external dependencies |
 
----
-
-## 📄 License
-
-**Proprietary Software** - All Rights Reserved  
-For licensing inquiries: sales@securamem.com
-
-### Usage License Required
-OASIS requires a valid license to operate. Licenses are node-locked to specific hardware via SHA-256 fingerprinting.
-
-```bash
-# Get your machine ID
 oasis machine-id
 
 # Output: 91f18d9691eea91d69f42a5bd474a26b1ca24b2747ba42fa3f99717caad79bfb

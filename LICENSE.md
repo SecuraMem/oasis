@@ -25,7 +25,7 @@ This Software may only be used under a valid commercial license agreement issued
 
 For licensing inquiries, enterprise partnerships, or acquisition discussions:
 
-**Contact**: sales@securamem.com  
+**Contact**: jeremy@securamem.com  
 **Repository**: https://github.com/SecuraMem/oasis
 
 ### Warranty Disclaimer

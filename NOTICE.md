@@ -38,7 +38,7 @@ Certain features of this software may be covered by pending patent applications.
 For licensing, acquisition, or partnership inquiries:
 
 **SecuraMem**  
-Email: sales@securamem.com  
+Email: jeremy@securamem.com  
 Repository: https://github.com/SecuraMem/oasis
 
 ---
