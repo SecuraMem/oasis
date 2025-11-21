@@ -1,0 +1,14 @@
+[package]
+name = "oasis-sandbox"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+wasmtime = "16.0"
+wasmtime-wasi = "16.0"
+cap-std = "2.0"
+tokio = { workspace = true }
+anyhow = "1.0"
+tracing = "0.1"
+securamem-l1 = { path = "../securamem-l1" }
+tempfile = "3.8"
