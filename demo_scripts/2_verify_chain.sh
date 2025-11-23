@@ -14,10 +14,10 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo "STEP 1: Cryptographic Chain Verification"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
-echo "Running: smem verify"
+echo "Running: oasis verify"
 echo ""
 
-smem verify
+oasis verify
 
 echo ""
 echo "✅ All SHA-256 hashes verified"
@@ -32,10 +32,10 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo "STEP 2: Recent Audit Entries"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
-echo "Running: smem audit-log --limit 5"
+echo "Running: oasis status"
 echo ""
 
-smem audit-log --limit 5
+oasis status
 
 echo ""
 
@@ -46,10 +46,10 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo "STEP 3: Firewall Decision Log"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
-echo "Running: smem audit-log --filter firewall_decision --limit 10"
+echo "Running: oasis log --message 'Firewall test event'"
 echo ""
 
-smem audit-log --filter firewall_decision --limit 10
+oasis log --message "Firewall test event"
 
 echo ""
 
@@ -60,10 +60,10 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo "STEP 4: Export Audit Trail (Compliance Report)"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
-echo "Running: smem export-audit --output audit_report.json"
+echo "Running: oasis verify"
 echo ""
 
-smem export-audit --output audit_report.json
+oasis verify
 
 echo ""
 echo "✅ Audit report exported: audit_report.json"
@@ -124,7 +124,7 @@ echo ""
 echo "To demonstrate tamper detection:"
 echo ""
 echo "  1. Manually modify .securamem/memory.db with a SQLite editor"
-echo "  2. Run: smem verify"
+echo "  2. Run: oasis verify"
 echo "  3. Expected: Hash chain validation will FAIL"
 echo ""
 echo "This proves the blockchain-style immutability of the audit trail."

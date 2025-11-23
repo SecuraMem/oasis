@@ -240,7 +240,7 @@ mod tests {
 
     #[test]
     fn test_semantic_engine_initialization() {
-        let engine = SemanticEngine::new().expect("Failed to initialize engine");
+        let _engine = SemanticEngine::new().expect("Failed to initialize engine");
         assert!(true, "Engine loaded successfully");
     }
 

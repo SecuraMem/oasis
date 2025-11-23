@@ -12,3 +12,6 @@ anyhow = "1.0"
 tracing = "0.1"
 securamem-l1 = { path = "../securamem-l1" }
 tempfile = "3.8"
+
+[dev-dependencies]
+wat = "1.0"

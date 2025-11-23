@@ -82,7 +82,7 @@ struct AppState {
     openai_api_key: String,
     db: Arc<Database>,
     // Store key_id for logging
-    key_id: String,
+    _key_id: String,
 }
 
 /// OpenAI Chat Completion Request (simplified)
@@ -122,7 +122,7 @@ pub async fn start_firewall_server(
         forbidden,
         openai_api_key,
         db: Arc::new(db),
-        key_id,
+        _key_id: key_id,
     });
 
     let app = Router::new()

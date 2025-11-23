@@ -75,11 +75,11 @@ mod tests {
         )
         "#;
         
-        // Wasmtime can compile WAT directly
-        let binary = wasmtime::Wat2Wasm::new().convert(wat).expect("Failed to convert WAT");
+        // Convert WAT to WASM using the wat crate
+        let binary = wat::parse_str(wat).expect("Failed to convert WAT");
         
         let runner = Runner::new().expect("Failed to create runner");
-        let result = runner.run_simulation(binary.as_ref()).expect("Failed to run simulation");
+        let result = runner.run_simulation(&binary).expect("Failed to run simulation");
         
         assert!(result.success, "Simulation should succeed");
     }
@@ -97,10 +97,11 @@ mod tests {
         )
         "#;
         
-        let binary = wasmtime::Wat2Wasm::new().convert(wat).expect("Failed to convert WAT");
-        
+        // Convert WAT to WASM using the wat crate
+        let binary = wat::parse_str(wat).expect("Failed to convert WAT");
+
         let runner = Runner::new().expect("Failed to create runner");
-        let result = runner.run_simulation(binary.as_ref()).expect("Failed to run simulation");
+        let result = runner.run_simulation(&binary).expect("Failed to run simulation");
         
         assert!(!result.success, "Simulation should fail due to fuel");
         assert!(result.output.contains("Fuel exhausted"), "Output should mention fuel exhaustion");

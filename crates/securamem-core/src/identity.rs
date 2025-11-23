@@ -128,7 +128,6 @@ impl IdentityManager {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use std::path::PathBuf;
 
     #[test]
     fn test_identity_persistence() {
